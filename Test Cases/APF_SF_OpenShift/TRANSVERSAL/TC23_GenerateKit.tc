@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC23_GenerateKit</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4ee7420a-f356-4815-93f3-e2350a2cff8d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c21855ea-1fa5-4389-b5fe-8faee665c8e2</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7698e7d1-55ac-46d4-8b12-20258e2e8e32</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'CAEJ900211MMCSSN06'</defaultValue>
+      <description></description>
+      <id>c21855ea-1fa5-4389-b5fe-8faee665c8e2</id>
+      <masked>false</masked>
+      <name>CURP</name>
+   </variable>
+   <variable>
+      <defaultValue>'DO9sYaatdI8DqfRStCBXCAhZ9QDgkW6zynBGVjam_W8.2QitfhX0NNyslDynAr9i9yVgXD2ZJ1wk-DIKwtp4pSMCzlcBm3XhNGov9k1Wc_Lj'</defaultValue>
+      <description></description>
+      <id>7698e7d1-55ac-46d4-8b12-20258e2e8e32</id>
+      <masked>false</masked>
+      <name>quoteId</name>
+   </variable>
+</TestCaseEntity>

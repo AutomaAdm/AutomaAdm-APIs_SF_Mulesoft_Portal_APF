@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC14_SaveLifeAssessmentResponses</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d16e09cf-3f01-4eeb-9b1e-20286eef8643</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3638f5a8-cf24-47e2-b1e3-3f8aa19a7f47</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'0Q0DO0000008n8C0AQ'</defaultValue>
+      <description></description>
+      <id>3638f5a8-cf24-47e2-b1e3-3f8aa19a7f47</id>
+      <masked>false</masked>
+      <name>quoteId</name>
+   </variable>
+</TestCaseEntity>

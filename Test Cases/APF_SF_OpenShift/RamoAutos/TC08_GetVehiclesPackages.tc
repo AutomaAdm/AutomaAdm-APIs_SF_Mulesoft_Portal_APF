@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_GetVehiclesPackages</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1ccbf06b-fc9c-4b4f-ad0f-985355d92d4c</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>230ce758-53cc-4391-aad8-2ed9f2323317</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'002'</defaultValue>
+      <description></description>
+      <id>230ce758-53cc-4391-aad8-2ed9f2323317</id>
+      <masked>false</masked>
+      <name>TypeVehiculo</name>
+   </variable>
+</TestCaseEntity>

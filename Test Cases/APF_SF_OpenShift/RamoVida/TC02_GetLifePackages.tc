@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_GetLifePackages</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b349dca3-96df-4835-9066-1c542bc4eaf2</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a0ec674b-433b-4755-95e1-af2249f560e0</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'0'</defaultValue>
+      <description></description>
+      <id>a0ec674b-433b-4755-95e1-af2249f560e0</id>
+      <masked>false</masked>
+      <name>pq</name>
+   </variable>
+</TestCaseEntity>

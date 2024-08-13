@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC20_GetAutoModel</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c32171e7-8d52-46bc-91eb-4644d17f0780</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f01403d2-f9b8-405c-803c-271d08290d4d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'FO'</defaultValue>
+      <description></description>
+      <id>f01403d2-f9b8-405c-803c-271d08290d4d</id>
+      <masked>false</masked>
+      <name>codMarca</name>
+   </variable>
+</TestCaseEntity>

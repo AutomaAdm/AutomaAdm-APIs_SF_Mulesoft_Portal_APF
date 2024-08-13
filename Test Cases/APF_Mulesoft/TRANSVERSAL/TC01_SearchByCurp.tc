@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_SearchByCurp</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d717f736-c793-4f1a-b264-9f0b35dd8432</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>03bdaf8d-0892-4618-ac45-8d143aedadf1</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'EAMJ621226HHGSRN06'</defaultValue>
+      <description></description>
+      <id>03bdaf8d-0892-4618-ac45-8d143aedadf1</id>
+      <masked>false</masked>
+      <name>CURP</name>
+   </variable>
+</TestCaseEntity>

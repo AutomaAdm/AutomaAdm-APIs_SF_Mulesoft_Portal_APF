@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_MS_SearchByCurp</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e661525b-eb22-4d1b-afa6-d85517ecad55</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a39eaa66-1e09-4cdc-b381-ec56781e67e7</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'ROMI810517HGTBRS04'</defaultValue>
+      <description></description>
+      <id>a39eaa66-1e09-4cdc-b381-ec56781e67e7</id>
+      <masked>false</masked>
+      <name>CURP</name>
+   </variable>
+</TestCaseEntity>

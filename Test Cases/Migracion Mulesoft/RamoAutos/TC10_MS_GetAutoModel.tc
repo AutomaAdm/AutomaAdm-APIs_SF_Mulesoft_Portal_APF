@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_MS_GetAutoModel</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a3c3bb76-3be2-4d61-97a4-c203e20530db</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3de24af9-be43-4cbf-9376-1f6202d64218</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'FO'</defaultValue>
+      <description></description>
+      <id>3de24af9-be43-4cbf-9376-1f6202d64218</id>
+      <masked>false</masked>
+      <name>codMarca</name>
+   </variable>
+</TestCaseEntity>

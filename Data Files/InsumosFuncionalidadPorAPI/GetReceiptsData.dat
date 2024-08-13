@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description></description>
+   <name>GetReceiptsData</name>
+   <tag></tag>
+   <connectionProperties/>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator></csvSeperator>
+   <dataFileGUID>32909e38-03ab-4988-b5ce-b7d7c6e217b3</dataFileGUID>
+   <dataSourceUrl>C:\Users\JRobertoMV\Katalon Studio\Poyectos Banorte\APF_APIS_SF_MulesoftV2\Data Files\Inusmos API Individual.xlsx</dataSourceUrl>
+   <driver>ExcelFile</driver>
+   <isInternalPath>false</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName>GetReceiptsData</sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

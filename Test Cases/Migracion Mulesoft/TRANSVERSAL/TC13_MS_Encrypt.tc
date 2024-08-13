@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC13_MS_Encrypt</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ee78b3f3-1e8b-436c-89d0-d73671cf955d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>085f2aa7-712f-40bf-84f0-4717488dd7b8</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'1923456273545691'</defaultValue>
+      <description></description>
+      <id>085f2aa7-712f-40bf-84f0-4717488dd7b8</id>
+      <masked>false</masked>
+      <name>value</name>
+   </variable>
+</TestCaseEntity>

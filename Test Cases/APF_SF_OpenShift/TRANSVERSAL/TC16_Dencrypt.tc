@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC16_Dencrypt</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>76245f5b-98ab-4945-b3f2-d4f97a6b48a0</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>26fb81bd-a343-4aca-b6ed-090dac689b0c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'ojhN7RtB+TixTxPLy++DL50Wdvkntn2Q6gCmRnHb1rqaqXX6mbTO7Eu+fppeIZUJ'</defaultValue>
+      <description></description>
+      <id>26fb81bd-a343-4aca-b6ed-090dac689b0c</id>
+      <masked>false</masked>
+      <name>value</name>
+   </variable>
+</TestCaseEntity>

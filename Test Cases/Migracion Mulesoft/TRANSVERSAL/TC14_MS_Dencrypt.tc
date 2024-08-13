@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC14_MS_Dencrypt</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>08d2e0ef-9a60-42f1-8d91-27a2e7597d3d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>01578418-4f5a-4d3d-8e76-46594ffbfe10</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'ojhN7RtB+TixTxPLy++DL50Wdvkntn2Q6gCmRnHb1rqaqXX6mbTO7Eu+fppeIZUJ'</defaultValue>
+      <description></description>
+      <id>01578418-4f5a-4d3d-8e76-46594ffbfe10</id>
+      <masked>false</masked>
+      <name>value</name>
+   </variable>
+</TestCaseEntity>

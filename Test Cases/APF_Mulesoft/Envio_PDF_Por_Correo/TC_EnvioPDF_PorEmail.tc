@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_EnvioPDF_PorEmail</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bc23fc74-23da-443b-aa47-0f00ecd33abc</testCaseGuid>
+</TestCaseEntity>
