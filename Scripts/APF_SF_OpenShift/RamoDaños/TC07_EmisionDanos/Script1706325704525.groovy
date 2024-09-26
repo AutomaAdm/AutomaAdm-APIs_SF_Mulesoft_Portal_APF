@@ -85,7 +85,10 @@ if (GlobalVariable.QUOTEID != '') {
 
     //
     WS.comment('Poliza generada:' + poliza)
-
+	
+	//Se agrega la poliza en archivo excel
+	String origen="SalesForce"
+	CustomKeywords.'ArchivoExcel.agregarUrlKitCAHA'(poliza, GlobalVariable.BRANCHCODE, pq, GlobalVariable.URLKIT_PDF, GlobalVariable.RQ_QUOTE, PaymentPeriod,StartDate,origen)
     
     //En el TC Payworks se tiene el TC de Encrypt y Dencrypt
     WebUI.callTestCase(findTestCase('APF_SF_OpenShift/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME
@@ -93,9 +96,9 @@ if (GlobalVariable.QUOTEID != '') {
             , ('TypeOfCard') : TypeOfCard, ('installmentAmount') : GlobalVariable.PRIMERPAGO, ('BRANCHCODE') : GlobalVariable.BRANCHCODE
             , ('referencia_cliente1') : poliza, ('mode') : 'AUTORIZADA'], FailureHandling.STOP_ON_FAILURE)
 	
-	String origen="SalesForce"
-	//Se agrega la poliza en archivo excel
-	CustomKeywords.'ArchivoExcel.agregarUrlKitCAHA'(poliza, GlobalVariable.BRANCHCODE, pq, GlobalVariable.URLKIT_PDF, GlobalVariable.RQ_QUOTE, PaymentPeriod,StartDate,origen)
+	
+	
+	
 
 }
 
