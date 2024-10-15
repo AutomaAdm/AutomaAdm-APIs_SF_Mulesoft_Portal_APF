@@ -280,9 +280,9 @@ class ArchivoExcel {
 		cell = row.createCell(7);
 
 		cell.setCellValue(StartDate);
-		
+
 		cell = row.createCell(8);
-		
+
 		cell.setCellValue(origen);
 
 
@@ -396,7 +396,7 @@ class ArchivoExcel {
 		cell.setCellValue(fechaEjecucion);
 
 		cell = row.createCell(10);
-		
+
 		cell.setCellValue(origen);
 
 		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
@@ -485,9 +485,9 @@ class ArchivoExcel {
 		cell = row.createCell(6);
 
 		cell.setCellValue(StartDate);
-		
+
 		cell = row.createCell(7);
-		
+
 		cell.setCellValue(origen);
 
 

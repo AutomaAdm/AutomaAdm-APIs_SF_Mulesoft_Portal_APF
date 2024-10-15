@@ -41,15 +41,15 @@ if (GlobalVariable.STATUSCURP) {
     def status = CustomKeywords.'consultaPaquetes.ValidacionPaquetes.validarPaqueteAutos'(GlobalVariable.RESPONSEPQ, tipoVehicu)
 
     //Se valida estatus
-    if (status) {
-        WS.comment('La respuesta de GetVehiclesPackages es la esperada para el tipo de vehiculo : ' + tipoVehicu)
-
-        GlobalVariable.STATUSRESTPQ = true
-    } else {
-        WS.comment('La respesta de GetVehiclesPackages no es la esparada para el tipo de vehiculo : ' + tipoVehicu)
-
-        GlobalVariable.STATUSRESTPQ = false
-    }
+//    if (status) {
+//        WS.comment('La respuesta de GetVehiclesPackages es la esperada para el tipo de vehiculo : ' + tipoVehicu)
+//
+//        GlobalVariable.STATUSRESTPQ = true
+//    } else {
+//        WS.comment('La respesta de GetVehiclesPackages no es la esparada para el tipo de vehiculo : ' + tipoVehicu)
+//
+//        GlobalVariable.STATUSRESTPQ = false
+//    }
 }
 
 

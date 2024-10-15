@@ -4,6 +4,7 @@
    <name>TC18_Cumulo</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>8525315e-20d0-41b4-ac16-91ba010876c3</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

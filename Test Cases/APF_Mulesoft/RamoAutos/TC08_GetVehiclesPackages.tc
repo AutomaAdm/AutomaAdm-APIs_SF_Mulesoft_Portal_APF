@@ -4,6 +4,7 @@
    <name>TC08_GetVehiclesPackages</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>77572009-af05-4d51-aa50-f519e6854e03</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
