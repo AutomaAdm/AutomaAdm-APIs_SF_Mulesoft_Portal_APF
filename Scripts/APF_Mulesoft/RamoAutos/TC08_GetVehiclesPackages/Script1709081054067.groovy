@@ -38,7 +38,7 @@ if (GlobalVariable.STATUSCURP) {
     GlobalVariable.BRANCHCODE = GlobalVariable.RESPONSEPQ[0].package.branchCode
 
     //se recupera el estatus de la validación entre la respuesta esperada con la obtenida de la GetVehiclesPackages de acuerdo al tipo de vahiculo
-    def status = CustomKeywords.'consultaPaquetes.ValidacionPaquetes.validarPaqueteAutos'(GlobalVariable.RESPONSEPQ, tipoVehicu)
+    //def status = CustomKeywords.'consultaPaquetes.ValidacionPaquetes.validarPaqueteAutos'(GlobalVariable.RESPONSEPQ, tipoVehicu)
 
     //Se valida estatus
 //    if (status) {

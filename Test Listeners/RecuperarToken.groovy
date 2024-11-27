@@ -50,6 +50,8 @@ class RecuperarToken {
 				
 				GlobalVariable.HOST="https://segbanortesfi--qa.sandbox.my.salesforce.com"
 				GlobalVariable.HOSTNAME_MULESOFT="https://mule-entornos.segurosbanorte.com/sb-ipa-capps-qa-proxy"
+				                                  https://mule-entornos.segurosbanorte.com/syp-arq-capps-cumulo-qa-proxy
+				                                  https://mule-entornos.segurosbanorte.com/syp-arq-capps-encrypt-qa-proxy/
 				print(GlobalVariable.TOKEN)
 				
 				KeywordUtil.logInfo('Token: ' + GlobalVariable.TOKEN)
