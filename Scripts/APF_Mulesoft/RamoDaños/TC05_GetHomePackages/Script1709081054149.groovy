@@ -30,7 +30,13 @@ if (GlobalVariable.STATUSCURP) {
                 , ('rAplicaDmedR') : AplicaDmedR, ('rAplicaRcgeR') : AplicaRcgeR, ('rAplicaDmrbR') : AplicaDmrbR, ('rCodigoPostalR') : CodigoPostalR
                 , ('rValorContenidosR') : ValorContenidosR]))
 
-    WS.verifyResponseStatusCode(responseGetHomePackages, 200)
+    
+	TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Danios/MS_GetHomePackages')
+	String url = request.getUrl()
+	WS.comment(url)
+	
+	
+	WS.verifyResponseStatusCode(responseGetHomePackages, 200)
 
     GlobalVariable.RESPONSEPQ = jsonSlurper.parseText(responseGetHomePackages.getResponseText())
 

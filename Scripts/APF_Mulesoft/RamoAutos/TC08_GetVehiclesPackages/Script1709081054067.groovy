@@ -31,6 +31,11 @@ if (GlobalVariable.STATUSCURP) {
     //Se recuperan los paquetes por Vehiculo 
     ResponseObject responseGetPackages = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Autos/GetVehiclePackage/MS_GetVehiclePackage', [('vehiculo') : tipoVehicu]))
 
+	TestObject request= findTestObject('Migracion Mulesoft/Salesforce/Autos/GetVehiclePackage/MS_GetVehiclePackage')
+	String url = request.getUrl()
+	WS.comment(url)
+	
+	
     WS.verifyResponseStatusCode(responseGetPackages, 200)
 
     GlobalVariable.RESPONSEPQ = jsonSlurper.parseText(responseGetPackages.getResponseText())

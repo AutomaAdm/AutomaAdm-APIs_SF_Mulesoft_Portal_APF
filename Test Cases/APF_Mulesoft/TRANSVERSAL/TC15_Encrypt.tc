@@ -4,6 +4,7 @@
    <name>TC15_Encrypt</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>9406339c-edb0-40f2-8369-1d277db9193d</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

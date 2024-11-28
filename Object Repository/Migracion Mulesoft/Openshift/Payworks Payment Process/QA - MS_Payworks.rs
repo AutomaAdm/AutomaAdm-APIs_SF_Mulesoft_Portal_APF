@@ -38,7 +38,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://mule-entornos.segurosbanorte.com/syp-arq-capps-payworks-qa-proxy/payworks/api/payment/process/deducibles_generales</restUrl>
+   <restUrl>${GlobalVariable.HOST_PAYWORKS_MULE}/payworks/api/payment/process</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

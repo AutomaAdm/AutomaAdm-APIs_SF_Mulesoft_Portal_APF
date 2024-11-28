@@ -4,6 +4,7 @@
    <name>TC23_GenerateKit</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>8c0036bb-61dc-4c39-a3aa-4f1bcf8c1586</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

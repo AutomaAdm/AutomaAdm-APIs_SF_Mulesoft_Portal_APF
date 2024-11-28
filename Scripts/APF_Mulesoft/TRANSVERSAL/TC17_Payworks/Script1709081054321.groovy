@@ -75,10 +75,26 @@ if (validar) {
     WS.comment('NO son iguales las listas')
 }
 
+
+println(datosEncrypt[0])
+println(datosEncrypt[1])
+println(datosEncrypt[2])
+println(datosEncrypt[3])
+println(tipo_tarjeta)
+println(installmentAmount)
+println(referencia)
+println(referencia_cliente1)
+println(mode)
 ResponseObject responsePayworks = WS.sendRequest(findTestObject('Migracion Mulesoft/Openshift/Payworks Payment Process/QA - MS_Payworks', [('numero') : datosEncrypt[
             0], ('nombrePropietario') : datosEncrypt[1], ('codigoSeguridad') : datosEncrypt[2], ('fechaExpiracion') : datosEncrypt[
             3], ('tipo_tarjeta') : tipo_tarjeta, ('monto') : installmentAmount, ('referencia') : referencia, ('referencia_cliente1') : referencia_cliente1
             , ('mode') : mode]))
+
+
+TestObject request=findTestObject('Migracion Mulesoft/Openshift/Payworks Payment Process/QA - MS_Payworks')
+String url = request.getUrl()
+WS.comment(url)
+
 
 WS.verifyResponseStatusCode(responsePayworks, 200)
 

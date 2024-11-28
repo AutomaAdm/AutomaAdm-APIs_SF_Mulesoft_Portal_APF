@@ -25,6 +25,12 @@ def jsonSlurper = new JsonSlurper()
 //Se recuperan los modelos del id de codigo de marca
 ResponseObject responseGetAutomakes = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Autos/GetAutoModel/MS_GetAutoModel', [('codMarca') : codMarca]))
 
+TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Autos/GetAutoModel/MS_GetAutoModel')
+String url = request.getUrl()
+WS.comment(url)
+
+
+
 WS.verifyResponseStatusCode(responseGetAutomakes, 200)
 
 def jsonResponseGetAutomakes = jsonSlurper.parseText(responseGetAutomakes.getResponseText())

@@ -4,6 +4,7 @@
    <name>TC01_SearchByCurp</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>d717f736-c793-4f1a-b264-9f0b35dd8432</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

@@ -26,6 +26,12 @@ def jsonSlurper = new JsonSlurper()
 ResponseObject responseGetReceiptsData = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/GetReceiptsData/MS_GetReceiptsData', [('price') : price, ('total') : total, ('taxAmount') : taxAmount, ('priceWithExpense') : priceWithExpense, ('expense') : expense
             , ('numInstallments') : numInstallments, ('productCode') : productCode]))
 
+
+TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Transversal/GetReceiptsData/MS_GetReceiptsData')
+String url = request.getUrl()
+WS.comment(url)
+
+
 WS.verifyResponseStatusCode(responseGetReceiptsData, 200)
 
 def jsonResponseGetReceiptsData = jsonSlurper.parseText(responseGetReceiptsData.getResponseText())

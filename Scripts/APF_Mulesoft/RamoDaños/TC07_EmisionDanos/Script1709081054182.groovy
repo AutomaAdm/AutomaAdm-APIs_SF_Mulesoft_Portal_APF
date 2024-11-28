@@ -56,7 +56,11 @@ if (GlobalVariable.QUOTEID != '') {
     //Generar Emision
     ResponseObject responseEmisionVidaPq1 = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/Emision/MS_Emision', [('vCurpId') : GlobalVariable.CURP
             , ('vQuoteId') : GlobalVariable.QUOTEID]))
-
+	
+	TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Transversal/Emision/MS_Emision')
+	String url = request.getUrl()
+	WS.comment(url)
+	
     WS.verifyResponseStatusCode(responseEmisionVidaPq1, 200)
 
     def jsonResponseEmisionVidaPq1 = jsonSlurper.parseText(responseEmisionVidaPq1.getResponseText())

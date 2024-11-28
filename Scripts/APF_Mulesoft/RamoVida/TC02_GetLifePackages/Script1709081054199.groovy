@@ -25,6 +25,11 @@ if (GlobalVariable.STATUSCURP) {
     //Se recupera la respuesta de la API GetLifePackages
     ResponseObject responseGetPackages = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Vida/GetLifePackages/MS_GetLifePackages'))
 
+	TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Vida/GetLifePackages/MS_GetLifePackages')
+	String url = request.getUrl()
+	WS.comment(url)
+	
+	
     WS.verifyResponseStatusCode(responseGetPackages, 200)
 
     GlobalVariable.RESPONSEPQ = jsonSlurper.parseText(responseGetPackages.getResponseText())

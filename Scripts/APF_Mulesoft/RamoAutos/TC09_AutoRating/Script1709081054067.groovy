@@ -35,7 +35,11 @@ if (GlobalVariable.STATUSRESTPQ) {
     //Ejecutar Api AutoRating
     ResponseObject responseAutoRating = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Autos/AutoRating/MS_AutoRating', [('inputjson') : inputJsonAutoRating]))
 
-    WS.verifyResponseStatusCode(responseAutoRating, 200)
+	TestObject request= findTestObject('Migracion Mulesoft/Salesforce/Autos/AutoRating/MS_AutoRating')
+	String url = request.getUrl()
+	WS.comment(url)
+	
+	WS.verifyResponseStatusCode(responseAutoRating, 200)
 
     GlobalVariable.RESPONSEAUTORATING = jsonSlurper.parseText(responseAutoRating.getResponseText())
 

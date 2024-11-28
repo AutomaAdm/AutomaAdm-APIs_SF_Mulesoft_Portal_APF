@@ -29,6 +29,10 @@ def jsonSlurper = new JsonSlurper()
 ResponseObject responseOnboarding =WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/ClbInsOnboardingWsbd/MS_ClbInsOnboardingWsbd', 
         [('quoteId') : quoteId , ('curp') : CURP]))
 
+TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Transversal/ClbInsOnboardingWsbd/MS_ClbInsOnboardingWsbd')
+String url = request.getUrl()
+WS.comment(url)
+
 WS.verifyResponseStatusCode(responseOnboarding, 200)
 
 def jsonResponseOnboarding = jsonSlurper.parseText(responseOnboarding.getResponseText())

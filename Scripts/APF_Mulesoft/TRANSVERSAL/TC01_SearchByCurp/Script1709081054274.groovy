@@ -28,6 +28,11 @@ def jsonSlurper = new JsonSlurper()
 //Se recuperar datos relacionados al curp
 ResponseObject responseGetCurp = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/SearchByCurp/MS_SearchByCurp', [('curp') : CURP]))
 
+TestObject request= findTestObject('Migracion Mulesoft/Salesforce/Transversal/SearchByCurp/MS_SearchByCurp')
+
+String url = request.getUrl()
+WS.comment(url)
+
 WS.verifyResponseStatusCode(responseGetCurp, 200)
 
 def jsonResponseGetCurp = jsonSlurper.parseText(responseGetCurp.getResponseText())

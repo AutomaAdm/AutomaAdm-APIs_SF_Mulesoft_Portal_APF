@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>default</name>
+   <name>PRE</name>
    <tag></tag>
-   <defaultProfile>true</defaultProfile>
+   <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
@@ -136,7 +136,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QA'</initValue>
+      <initValue>'PRE'</initValue>
       <name>AMBIENTE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

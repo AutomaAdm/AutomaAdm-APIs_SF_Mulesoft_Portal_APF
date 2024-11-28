@@ -25,6 +25,10 @@ def jsonSlurper = new JsonSlurper()
 ResponseObject responseSaveAssess = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Vida/Assessments/SaveLifeAssessmentResponses/MS_SaveLifeAssessmentResponses', 
         [('quoteId') : quoteId]))
 
+TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Vida/Assessments/SaveLifeAssessmentResponses/MS_SaveLifeAssessmentResponses')
+String url = request.getUrl()
+WS.comment(url)
+
 WS.verifyResponseStatusCode(responseSaveAssess, 200)
 
 def jsonResponseSaveAssess = jsonSlurper.parseText(responseSaveAssess.getResponseText())

@@ -4,6 +4,7 @@
    <name>TC16_Dencrypt</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>225ad401-b4fc-44ad-a244-1f329d7e342a</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

@@ -27,6 +27,12 @@ def jsonSlurper = new JsonSlurper()
 ResponseObject responseGenerarKit = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/GenerateKit/MS_GenerateKit', 
         [('quoteId') : quoteId, ('curpId') : CURP]))
 
+
+TestObject request= findTestObject('Migracion Mulesoft/Salesforce/Transversal/GenerateKit/MS_GenerateKit')
+String url = request.getUrl()
+WS.comment(url)
+
+
 WS.verifyResponseStatusCode(responseGenerarKit, 200)
 
 def jsonResponseGenerarKit = jsonSlurper.parseText(responseGenerarKit.getResponseText())
@@ -37,6 +43,11 @@ WS.delay(8)
 
 //print(vId)
 ResponseObject responseDocumURL =WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/GetDocumentURL/MS_GetDocumentURL', [('Id') : vId]))
+
+TestObject request1= findTestObject('Migracion Mulesoft/Salesforce/Transversal/GetDocumentURL/MS_GetDocumentURL')
+String url1 = request1.getUrl()
+WS.comment(url1)
+
 
 WS.verifyResponseStatusCode(responseDocumURL, 200)
 

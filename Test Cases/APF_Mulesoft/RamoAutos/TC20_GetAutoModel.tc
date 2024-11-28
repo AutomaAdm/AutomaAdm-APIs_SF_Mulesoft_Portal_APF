@@ -4,6 +4,7 @@
    <name>TC20_GetAutoModel</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>09d69f42-e1c2-4803-b066-0207a17fd7da</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

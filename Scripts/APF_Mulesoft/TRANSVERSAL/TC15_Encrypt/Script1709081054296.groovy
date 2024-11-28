@@ -28,6 +28,11 @@ def jsonSlurper = new JsonSlurper()
 //Se recupera dato encriptado 
 ResponseObject responseEncrypt = WS.sendRequest(findTestObject('Migracion Mulesoft/Openshift/Encriptar/QA_MS_Encrpt', [('value') :value ]))
 
+
+TestObject request=findTestObject('Migracion Mulesoft/Openshift/Encriptar/QA_MS_Encrpt')
+String url = request.getUrl()
+WS.comment(url)
+
 WS.verifyResponseStatusCode(responseEncrypt, 200)
 
 def JsonResponseEncrypt = jsonSlurper.parseText(responseEncrypt.getResponseText())

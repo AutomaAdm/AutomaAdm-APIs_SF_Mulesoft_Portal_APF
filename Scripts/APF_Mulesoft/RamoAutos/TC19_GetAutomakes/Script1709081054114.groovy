@@ -25,6 +25,10 @@ def jsonSlurper = new JsonSlurper()
 //Se recuperan las marcas de los Vehiculo
 ResponseObject responseGetAutomakes = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Autos/GetAutomakes/MS_GetAutomakes'))
 
+TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Autos/GetAutomakes/MS_GetAutomakes')
+String url = request.getUrl()
+WS.comment(url)
+
 WS.verifyResponseStatusCode(responseGetAutomakes, 200)
 
 def jsonResponseGetAutomakes = jsonSlurper.parseText(responseGetAutomakes.getResponseText())

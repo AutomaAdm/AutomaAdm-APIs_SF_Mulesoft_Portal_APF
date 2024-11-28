@@ -4,6 +4,7 @@
    <name>TC21_AnioVehiculo</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>022fd9fa-c7c8-4bc0-949a-04fd0fbb03ad</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

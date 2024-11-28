@@ -38,7 +38,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://mule-entornos.segurosbanorte.com/syp-arq-capps-encrypt-qa-proxy/security/api/bapis/util/decrypt</restUrl>
+   <restUrl>${GlobalVariable.HOST_CRYPT_MULE}/security/api/bapis/util/decrypt</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

@@ -4,6 +4,7 @@
    <name>TC14_SaveLifeAssessmentResponses</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>fd84254c-34c5-44db-966d-4845762556d4</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

@@ -4,5 +4,6 @@
    <name>TC19_GetAutomakes</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>bb753874-009d-44bb-ad98-7c6c6896b586</testCaseGuid>
 </TestCaseEntity>

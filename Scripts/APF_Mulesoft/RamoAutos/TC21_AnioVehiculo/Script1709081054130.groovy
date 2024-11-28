@@ -26,6 +26,10 @@ def jsonSlurper = new JsonSlurper()
 ResponseObject responseAnioVehiculo = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Autos/AnioVehiculos/MS_AnioVehiculos', [('codMarca') : codMarca
             , ('codModelo') : codModelo]))
 
+TestObject request= findTestObject('Migracion Mulesoft/Salesforce/Autos/AnioVehiculos/MS_AnioVehiculos')
+String url = request.getUrl()
+WS.comment(url)
+
 WS.verifyResponseStatusCode(responseAnioVehiculo, 200)
 
 def jsonResponseAnioVehiculo = jsonSlurper.parseText(responseAnioVehiculo.getResponseText())

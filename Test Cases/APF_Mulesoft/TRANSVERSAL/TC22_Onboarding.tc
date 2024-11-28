@@ -4,6 +4,7 @@
    <name>TC22_Onboarding</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>f446dc94-73b6-4f53-aca3-f8d703e809e3</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

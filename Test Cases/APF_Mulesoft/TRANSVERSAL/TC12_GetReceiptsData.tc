@@ -4,6 +4,7 @@
    <name>TC12_GetReceiptsData</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>bb5c2dec-aa23-4ac8-8b88-317e746362c3</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

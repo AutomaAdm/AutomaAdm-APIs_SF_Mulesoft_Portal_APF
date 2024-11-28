@@ -38,7 +38,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://mule-entornos.segurosbanorte.com/syp-arq-capps-cumulo-qa-proxy/sb-cumulo/api/permitido</restUrl>
+   <restUrl>${GlobalVariable.HOST_CUMULO_MULE}/sb-cumulo/api/permitido</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

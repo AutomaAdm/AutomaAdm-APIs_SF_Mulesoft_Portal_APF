@@ -35,6 +35,11 @@ int edad = CustomKeywords.'CalcularEdad.CalculaEdad'(BirthDate)
 ResponseObject responseCumulo = WS.sendRequest(findTestObject('Migracion Mulesoft/Openshift/Cumulo/QA - MS-Cumulo', [('rfc') : rfc, ('paterno') : paterno
             , ('materno') : materno, ('nombre') : FirstName, ('sumaAsegurada') : sumaAsegurada, ('edad') : edad]))
 
+TestObject request=findTestObject('Migracion Mulesoft/Openshift/Cumulo/QA - MS-Cumulo')
+String url = request.getUrl()
+WS.comment(url)
+
+
 WS.verifyResponseStatusCode(responseCumulo, 200)
 
 def jsonResponseCumulo = jsonSlurper.parseText(responseCumulo.getResponseText())

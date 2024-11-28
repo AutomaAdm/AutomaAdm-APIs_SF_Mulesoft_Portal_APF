@@ -57,6 +57,10 @@ if (GlobalVariable.STATUSAUTORATING) {
     //Recuperamos la respesta de la Api CreateQuote
     ResponseObject responseCreateQuote = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/CreateQuote for All/MS_CreateQuote', [('jSonCotiVida') : jsonCotizacion]))
 
+	TestObject request= findTestObject('Migracion Mulesoft/Salesforce/Transversal/CreateQuote for All/MS_CreateQuote')
+	String url = request.getUrl()
+	WS.comment(url)
+	
     WS.verifyResponseStatusCode(responseCreateQuote, 200)
 
     def jsonResponseCreateQuote = jsonSlurper.parseText(responseCreateQuote.getResponseText())

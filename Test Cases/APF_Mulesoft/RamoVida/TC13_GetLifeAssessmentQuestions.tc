@@ -4,5 +4,6 @@
    <name>TC13_GetLifeAssessmentQuestions</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>ca7278f8-4a1b-43df-a6a0-b26b8effce78</testCaseGuid>
 </TestCaseEntity>

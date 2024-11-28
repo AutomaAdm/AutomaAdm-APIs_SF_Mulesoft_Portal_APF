@@ -24,6 +24,11 @@ def jsonSlurper = new JsonSlurper()
 //Se recupera el questionario de Vida
 ResponseObject responseQuestions = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Vida/Assessments/GetLifeAssessmenQuestions/GetLifeAssessmenQuestions'))
 
+TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Vida/Assessments/GetLifeAssessmenQuestions/GetLifeAssessmenQuestions')
+String url = request.getUrl()
+WS.comment(url)
+
+
 WS.verifyResponseStatusCode(responseQuestions, 200)
 
 def jsonResponseQuestions = jsonSlurper.parseText(responseQuestions.getResponseText())
