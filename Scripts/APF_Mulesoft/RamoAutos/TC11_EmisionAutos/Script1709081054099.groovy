@@ -22,8 +22,9 @@ import org.openqa.selenium.Keys as Keys
 
 def jsonSlurper = new JsonSlurper()
 
-String StartDate=CustomKeywords.'RecuperarFecha.devolverFechaInicio'()
-String EndDate=CustomKeywords.'RecuperarFecha.devolverFechaFin'()
+String StartDate = CustomKeywords.'RecuperarFecha.devolverFechaInicio'()
+
+String EndDate = CustomKeywords.'RecuperarFecha.devolverFechaFin'()
 
 EstructuraAutos autos = new EstructuraAutos()
 
@@ -47,15 +48,16 @@ WebUI.callTestCase(findTestCase('APF_Mulesoft/RamoAutos/TC09_AutoRating'), [('Po
 //Email=GlobalVariable.EMAIL_TEMP
 //En el CP CreateQuoteAutos se encuentra el TC GetReceiptsData
 WebUI.callTestCase(findTestCase('APF_Mulesoft/RamoAutos/TC10_CreateQuoteAutos'), [('PhoneNumber') : PhoneNumber, ('Email') : Email
-        , ('isDriver') : isDriver, ('FirstNameConductor') : FirstNameConductor, ('LastNameConductor') : LastNameConductor, ('PhoneNumberConductor') : PhoneNumberConductor
-	, ('EmailConductor') : EmailConductor,('Street') : Street, ('ExternalNumber') : ExternalNumber, ('InternalNumber') : InternalNumber
-        , ('City') : City, ('Country') : Country, ('State') : State, ('Town') : Town, ('PostalCode') : PostalCode, ('StartDate') : StartDate
-        , ('EndDate') : EndDate, ('Bank') : Bank, ('CardCVV') : CardCVV, ('PaymentPeriod') : PaymentPeriod, ('TypeOfCard') : TypeOfCard
-        , ('IsRecurringPayment') : IsRecurringPayment, ('CardMonth') : CardMonth, ('CardNumber') : CardNumber, ('CardYear') : CardYear
-        , ('Year') : Year, ('Brand') : Brand, ('TypeVehiculo') : TypeVehiculo, ('Model') : Model, ('ModelDesc') : ModelDesc
-        , ('CodePlan') : CodePlan, ('mtoValorComercial') : mtoValorComercial, ('SerieNumber') : SerieNumber, ('EngineNumber') : EngineNumber
-        , ('NumberPlate') : NumberPlate, ('estadoAseg') : estadoAseg, ('estadoCirculacion') : estadoCirculacion, ('municipioAseg') : municipioAseg
-        , ('municipioCirculacion') : municipioCirculacion], FailureHandling.STOP_ON_FAILURE)
+        , ('isDriver') : isDriver, ('FirstNameConductor') : FirstNameConductor, ('LastNameConductor') : LastNameConductor
+        , ('PhoneNumberConductor') : PhoneNumberConductor, ('EmailConductor') : EmailConductor, ('Street') : Street, ('ExternalNumber') : ExternalNumber
+        , ('InternalNumber') : InternalNumber, ('City') : City, ('Country') : Country, ('State') : State, ('Town') : Town
+        , ('PostalCode') : PostalCode, ('StartDate') : StartDate, ('EndDate') : EndDate, ('Bank') : Bank, ('CardCVV') : CardCVV
+        , ('PaymentPeriod') : PaymentPeriod, ('TypeOfCard') : TypeOfCard, ('IsRecurringPayment') : IsRecurringPayment, ('CardMonth') : CardMonth
+        , ('CardNumber') : CardNumber, ('CardYear') : CardYear, ('Year') : Year, ('Brand') : Brand, ('TypeVehiculo') : TypeVehiculo
+        , ('Model') : Model, ('ModelDesc') : ModelDesc, ('CodePlan') : CodePlan, ('mtoValorComercial') : mtoValorComercial
+        , ('SerieNumber') : SerieNumber, ('EngineNumber') : EngineNumber, ('NumberPlate') : NumberPlate, ('estadoAseg') : estadoAseg
+        , ('estadoCirculacion') : estadoCirculacion, ('municipioAseg') : municipioAseg, ('municipioCirculacion') : municipioCirculacion], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC23_GenerateKit'), [('CURP') : GlobalVariable.CURP, ('quoteId') : GlobalVariable.QUOTEID], 
     FailureHandling.STOP_ON_FAILURE)
@@ -71,13 +73,13 @@ if (GlobalVariable.QUOTEID != '') {
     ResponseObject responseEmisionVidaPq1 = WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/Emision/MS_Emision', 
             [('vCurpId') : GlobalVariable.CURP, ('vQuoteId') : GlobalVariable.QUOTEID]))
 
-    
-	TestObject request=findTestObject('Migracion Mulesoft/Salesforce/Transversal/Emision/MS_Emision')
-	String url = request.getUrl()
-	WS.comment(url)
-	
-	
-	WS.verifyResponseStatusCode(responseEmisionVidaPq1, 200)
+    TestObject request = findTestObject('Migracion Mulesoft/Salesforce/Transversal/Emision/MS_Emision')
+
+    String url = request.getUrl()
+
+    WS.comment(url)
+
+    WS.verifyResponseStatusCode(responseEmisionVidaPq1, 200)
 
     def jsonResponseEmisionVidaPq1 = jsonSlurper.parseText(responseEmisionVidaPq1.getResponseText())
 
@@ -87,17 +89,17 @@ if (GlobalVariable.QUOTEID != '') {
     //
     WS.comment('Poliza generada:' + poliza)
 
-    
     //En el TC Payworks se encuentra el TC Encrypt y Dencrypt
-    WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME
-            , ('LastName') : GlobalVariable.LASTNAME, ('CardCVV') : CardCVV, ('CardMonth') : CardMonth, ('CardYear') : CardYear
-            , ('TypeOfCard') : TypeOfCard, ('installmentAmount') : GlobalVariable.PRIMERPAGO, ('BRANCHCODE') : GlobalVariable.BRANCHCODE
-            , ('referencia_cliente1') : poliza, ('mode') : 'AUTORIZADA'], FailureHandling.STOP_ON_FAILURE)
-	
-	String origen="Mulesoft"
-	//Se agrega la poliza en archivo excel
-	CustomKeywords.'ArchivoExcel.agregarUrlKitAutos'(poliza, GlobalVariable.BRANCHCODE,CodePlan, TypeVehiculo, GlobalVariable.URLKIT_PDF , GlobalVariable.RQ_QUOTE,GlobalVariable.RQ_AUTORATING, PaymentPeriod,StartDate,origen)
+//    WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME
+//            , ('LastName') : GlobalVariable.LASTNAME, ('CardCVV') : CardCVV, ('CardMonth') : CardMonth, ('CardYear') : CardYear
+//            , ('TypeOfCard') : TypeOfCard, ('installmentAmount') : GlobalVariable.PRIMERPAGO, ('BRANCHCODE') : GlobalVariable.BRANCHCODE
+//            , ('referencia_cliente1') : poliza, ('mode') : 'AUTORIZADA'], FailureHandling.STOP_ON_FAILURE)
 
+    String origen = 'Mulesoft'
+
+    //Se agrega la poliza en archivo excel
+    CustomKeywords.'ArchivoExcel.agregarUrlKitAutos'(poliza, GlobalVariable.BRANCHCODE, CodePlan, TypeVehiculo, GlobalVariable.URLKIT_PDF, 
+        GlobalVariable.RQ_QUOTE, GlobalVariable.RQ_AUTORATING, PaymentPeriod, StartDate, origen)
 }
 
 

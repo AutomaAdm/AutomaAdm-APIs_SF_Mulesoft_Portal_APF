@@ -73,7 +73,7 @@ public class EstructuraAutos {
 			def Street, def ExternalNumber, def InternalNumber, def City,
 			def Country, def State, def Town, def PostalCode, def  SerieNumber, def EngineNumber, def NumberPlate,def Brand, def Year,
 			def StartDate, def EndDate, def Bank, def CardCVV, def PaymentPeriod, def TypeOfCard, def IsRecurringPayment, def CardMonth, def CardNumber, def CardYear, def TypeVehiculo,
-			def Model, def ModelDesc, def CodePlan, def branch, def primerPago) {
+			def Model, def ModelDesc, def CodePlan, def branch, def primerPago, def jsonResponseReglaIV) {
 
 
 
@@ -134,23 +134,64 @@ public class EstructuraAutos {
 				"PostalCode": PostalCode
 			]
 		]
-
-		def step3 = [
-			"VehicleInformation": [
-				"SerieNumber": SerieNumber,
-				"EngineNumber": EngineNumber,
-				"NumberPlate": NumberPlate,
-				"Brand": Brand,
-				"Year": Year,
-				"Model": Model,
-				"ModelDesc": ModelDesc,
-				"Type": TypeVehiculo,
-				"PostalCode": PostalCode,
-				"isParticular": true,
-				"AcceptanceInformation": true,
-				"AcceptanceLaw": true
+		def step3=""
+		def respuestaReglaIV=jsonResponseReglaIV
+		if (respuestaReglaIV.response.idReglaIV!=null) {
+			 step3 = [
+				"VehicleInformation": [
+					"SerieNumber": SerieNumber,
+					"EngineNumber": EngineNumber,
+					"NumberPlate": NumberPlate,
+					"Brand": Brand,
+					"Year": Year,
+					"Model": Model,
+					"ModelDesc": ModelDesc,
+					"Type": TypeVehiculo,
+					"PostalCode": PostalCode,
+					"isParticular": true,
+					"AcceptanceInformation": true,
+					"AcceptanceLaw": true
+				],
+				"InspectionInformation":[
+					"RequireInspection":true,
+					"IdInspection":""+respuestaReglaIV.response.idReglaIV,
+					"phone":PhoneNumber,
+					"Email":Email,
+					"PenaltyInfo":respuestaReglaIV.response.reglasPenalizacion.collect {
+						[
+							"Code":it.codigo,
+							"Description":it.descripcion,
+							"Percentage":it.numPorcentajePenaliz,
+							"GracePeriod":respuestaReglaIV.response.diasGracia,
+							"KitDescription":it.dscKitImpresion
+						]
+					}
+				]
+				
 			]
-		]
+		}
+		else {
+			 step3 = [
+				"VehicleInformation": [
+					"SerieNumber": SerieNumber,
+					"EngineNumber": EngineNumber,
+					"NumberPlate": NumberPlate,
+					"Brand": Brand,
+					"Year": Year,
+					"Model": Model,
+					"ModelDesc": ModelDesc,
+					"Type": TypeVehiculo,
+					"PostalCode": PostalCode,
+					"isParticular": true,
+					"AcceptanceInformation": true,
+					"AcceptanceLaw": true
+				]
+				
+			]
+			
+			
+		}
+		
 
 
 

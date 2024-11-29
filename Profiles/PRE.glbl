@@ -169,4 +169,14 @@
       <initValue>''</initValue>
       <name>HOST_PAYWORKS_MULE</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[:]</initValue>
+      <name>RQ_REGLA_IV</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>HOST_REGLAINSPECTION</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

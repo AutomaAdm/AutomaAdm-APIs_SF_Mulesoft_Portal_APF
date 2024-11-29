@@ -44,13 +44,18 @@ if (GlobalVariable.STATUSAUTORATING) {
             , ('taxAmount') : RPAutoRating.taxAmount, ('priceWithExpense') : RPAutoRating.priceWithExpense, ('expense') : RPAutoRating.expense
             , ('numInstallments') : numInstallments, ('productCode') : CodePlan], FailureHandling.STOP_ON_FAILURE)
 
+	//Ejecutamos la apis para validar si los datos de vehiculo aplicar para una regla de inspección
+	WebUI.callTestCase(findTestCase('APF_Mulesoft/RamoAutos/TC22_ReglasInspeccion'), [('CodePlan') : CodePlan, ('estadoAseg') : estadoAseg
+		, ('municipioAseg') : municipioAseg, ('Brand') : Brand, ('Model') : Model, ('Year') : Year, ('mtoValorComercial') : mtoValorComercial, ('CURP') : CURP],
+	FailureHandling.STOP_ON_FAILURE)
+	
     //print(GlobalVariable.PRIMERPAGO)
     //Se crea el json de cotización
     def jsonCotizacion = autos.leerJson(GlobalVariable.RESPONSEAUTORATING, CURP, FirstName, LastName, RFC, PhoneNumber, 
         Email, isDriver,FirstNameConductor, LastNameConductor, PhoneNumberConductor, EmailConductor,
 		Street, ExternalNumber, InternalNumber, City, Country, State, Town, PostalCode, SerieNumber, EngineNumber, 
         NumberPlate, Brand, Year, StartDate, EndDate, Bank, CardCVV, PaymentPeriod, TypeOfCard, IsRecurringPayment, CardMonth, 
-        CardNumber, CardYear, TypeVehiculo, Model, ModelDesc, CodePlan, GlobalVariable.BRANCHCODE, GlobalVariable.PRIMERPAGO)
+        CardNumber, CardYear, TypeVehiculo, Model, ModelDesc, CodePlan, GlobalVariable.BRANCHCODE, GlobalVariable.PRIMERPAGO, GlobalVariable.RQ_REGLA_IV)
 
     print(jsonCotizacion)
 	GlobalVariable.RQ_QUOTE=jsonCotizacion

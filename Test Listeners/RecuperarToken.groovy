@@ -43,7 +43,9 @@ class RecuperarToken {
 				ResponseObject responseTokenSF = WS.sendRequest(findTestObject('Postman/token/Token_SF_QA'))
 				
 				
-				
+				TestObject request=findTestObject('Migracion Mulesoft/Openshift/TokenInstitucional/Token Institucional')
+				String url = request.getUrl()
+				WS.comment(url)
 				WS.verifyResponseStatusCode(responseTokenSF, 200)
 				
 				
@@ -58,8 +60,8 @@ class RecuperarToken {
 				KeywordUtil.logInfo('Token: ' + GlobalVariable.TOKEN)
 				
 				//Recuperar token Openshift
-				ResponseObject responseTokenOpenshift = WS.sendRequest(findTestObject('Postman/token/QA - Generación Token Institucional'))
-				
+				//ResponseObject responseTokenOpenshift = WS.sendRequest(findTestObject('Postman/token/QA - Generación Token Institucional'))
+				ResponseObject responseTokenOpenshift = WS.sendRequest(findTestObject('Migracion Mulesoft/Openshift/TokenInstitucional/Token Institucional'))
 				WS.verifyResponseStatusCode(responseTokenOpenshift, 200)
 				
 				def jsonResponseTokenOpenshift = jsonSlurper.parseText(responseTokenOpenshift.getResponseText())
@@ -72,7 +74,7 @@ class RecuperarToken {
 				GlobalVariable.HOST_CUMULO_MULE="https://mule-entornos.segurosbanorte.com/syp-arq-capps-cumulo-qa-proxy"
 				GlobalVariable.HOST_CRYPT_MULE="https://mule-entornos.segurosbanorte.com/syp-arq-capps-encrypt-qa-proxy"
 			    GlobalVariable.HOST_PAYWORKS_MULE="https://mule-entornos.segurosbanorte.com/syp-arq-capps-payworks-qa-proxy"
-				                                   https://mule-entornos.segurosbanorte.com/syp-arq-capps-payworks-qa-proxy
+				GlobalVariable.HOST_REGLAINSPECTION="https://mule-entornos.segurosbanorte.com/sb-ivehicular-apps-qa-proxy"
 			break;
 			case "PRE":
 			

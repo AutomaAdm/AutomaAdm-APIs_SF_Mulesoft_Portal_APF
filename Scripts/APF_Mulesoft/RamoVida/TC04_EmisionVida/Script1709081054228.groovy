@@ -26,6 +26,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook as XSSFWorkbook
 
 def jsonSlurper = new JsonSlurper()
 
+String StartDate=CustomKeywords.'RecuperarFecha.devolverFechaInicio'()
+String EndDate=CustomKeywords.'RecuperarFecha.devolverFechaFin'()
 WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC01_SearchByCurp'), [('CURP') : CURP], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('APF_Mulesoft/RamoVida/TC13_GetLifeAssessmentQuestions'), [:], FailureHandling.STOP_ON_FAILURE)
