@@ -137,7 +137,7 @@ public class EstructuraAutos {
 		def step3=""
 		def respuestaReglaIV=jsonResponseReglaIV
 		if (respuestaReglaIV.response.idReglaIV!=null) {
-			 step3 = [
+			step3 = [
 				"VehicleInformation": [
 					"SerieNumber": SerieNumber,
 					"EngineNumber": EngineNumber,
@@ -154,8 +154,8 @@ public class EstructuraAutos {
 				],
 				"InspectionInformation":[
 					"RequireInspection":true,
-					"IdInspection":""+respuestaReglaIV.response.idReglaIV,
-					"phone":PhoneNumber,
+					"IdInspection":""+respuestaReglaIV.response.idInspeccion,
+					"Phone":PhoneNumber,
 					"Email":Email,
 					"PenaltyInfo":respuestaReglaIV.response.reglasPenalizacion.collect {
 						[
@@ -167,11 +167,11 @@ public class EstructuraAutos {
 						]
 					}
 				]
-				
+
 			]
 		}
 		else {
-			 step3 = [
+			step3 = [
 				"VehicleInformation": [
 					"SerieNumber": SerieNumber,
 					"EngineNumber": EngineNumber,
@@ -186,12 +186,10 @@ public class EstructuraAutos {
 					"AcceptanceInformation": true,
 					"AcceptanceLaw": true
 				]
-				
+
 			]
-			
-			
 		}
-		
+
 
 
 

@@ -242,14 +242,14 @@
       <name>CURP</name>
    </variable>
    <variable>
-      <defaultValue>'5686767563'</defaultValue>
+      <defaultValue>'5616978120'</defaultValue>
       <description></description>
       <id>137d17ec-41d5-40ce-a44d-d8a5d8885c56</id>
       <masked>false</masked>
       <name>PhoneNumber</name>
    </variable>
    <variable>
-      <defaultValue>'CATALINA@cliente.com'</defaultValue>
+      <defaultValue>'jrmendozav@desarrollo-ultrasist.com.mx'</defaultValue>
       <description></description>
       <id>999295bf-b66b-4567-a555-1be49d360c6a</id>
       <masked>false</masked>

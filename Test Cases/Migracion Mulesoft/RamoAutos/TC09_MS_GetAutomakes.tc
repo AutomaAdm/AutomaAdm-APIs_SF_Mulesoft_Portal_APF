@@ -4,5 +4,6 @@
    <name>TC09_MS_GetAutomakes</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>4294bd12-c103-4c21-8e5c-4febb7163680</testCaseGuid>
 </TestCaseEntity>

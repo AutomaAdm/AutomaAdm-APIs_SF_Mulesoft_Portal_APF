@@ -18,6 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 WebUI.executeJavaScript('window.open();', [])
+
 currentWindow = WebUI.getWindowIndex()
 
 WebUI.switchToWindowIndex(currentWindow + 1)
@@ -26,4 +27,7 @@ WebUI.navigateToUrl(GlobalVariable.URLKIT_PDF)
 
 WebUI.delay(8)
 
-GlobalVariable.VENTANA_INICIO=currentWindow
+GlobalVariable.VENTANA_INICIO = currentWindow
+
+
+

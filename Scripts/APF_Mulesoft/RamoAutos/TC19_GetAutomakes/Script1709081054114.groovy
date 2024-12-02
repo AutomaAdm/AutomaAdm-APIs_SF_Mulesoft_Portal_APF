@@ -33,15 +33,15 @@ WS.verifyResponseStatusCode(responseGetAutomakes, 200)
 
 def jsonResponseGetAutomakes = jsonSlurper.parseText(responseGetAutomakes.getResponseText())
 
-ValidacionPaquetes marcasAutos = new ValidacionPaquetes()
-
-def estatus = marcasAutos.ValidarMarcasAutos(jsonResponseGetAutomakes)
-
-if (estatus) {
-    WS.comment('La respuesta de la api es la esperada')
-} else {
-    WS.comment('NO corresponde la respuesta con la esperada')
-}
+//ValidacionPaquetes marcasAutos = new ValidacionPaquetes()
+//
+//def estatus = marcasAutos.ValidarMarcasAutos(jsonResponseGetAutomakes)
+//
+//if (estatus) {
+//    WS.comment('La respuesta de la api es la esperada')
+//} else {
+//    WS.comment('NO corresponde la respuesta con la esperada')
+//}
 
 
 

@@ -24,11 +24,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class RecuperarFecha {
-	
+
 	@Keyword
 	def  devolverFechaInicio() {
 		Calendar fecha= Calendar.getInstance()
-		
+
 		String anio=fecha.get(Calendar.YEAR)
 		String mes = fecha.get(Calendar.MONTH)+1;
 		String dia = fecha.get(Calendar.DAY_OF_MONTH);
@@ -39,22 +39,21 @@ public class RecuperarFecha {
 			dia='0'+dia
 		}
 		return anio+'-'+mes+"-"+dia
-	  }
-	  
-	  @Keyword
-	  def  devolverFechaFin() {
-		  Calendar fecha= Calendar.getInstance()
-		  
-		  String anio=fecha.get(Calendar.YEAR)+1
-		  String mes = fecha.get(Calendar.MONTH)+1;
-		  String dia = fecha.get(Calendar.DAY_OF_MONTH);
-		  if(mes.length()<2) {
-			  mes='0'+mes
-		  }
-		  if(dia.length()<2) {
-			  dia='0'+dia
-		  }
-		  return anio+'-'+mes+"-"+dia
+	}
+
+	@Keyword
+	def  devolverFechaFin() {
+		Calendar fecha= Calendar.getInstance()
+
+		String anio=fecha.get(Calendar.YEAR)+1
+		String mes = fecha.get(Calendar.MONTH)+1;
+		String dia = fecha.get(Calendar.DAY_OF_MONTH);
+		if(mes.length()<2) {
+			mes='0'+mes
 		}
-	
+		if(dia.length()<2) {
+			dia='0'+dia
+		}
+		return anio+'-'+mes+"-"+dia
+	}
 }

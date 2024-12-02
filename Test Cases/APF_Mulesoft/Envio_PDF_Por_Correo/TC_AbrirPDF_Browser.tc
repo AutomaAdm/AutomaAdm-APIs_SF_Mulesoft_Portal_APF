@@ -4,5 +4,6 @@
    <name>TC_AbrirPDF_Browser</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>bd8774ed-90be-4738-b46d-ea2a684cce55</testCaseGuid>
 </TestCaseEntity>

@@ -86,22 +86,27 @@ class RecuperarToken {
 				
 				GlobalVariable.TOKEN = ('Bearer ' + jsonResponseTokenSF.access_token)
 				
-				GlobalVariable.HOST="https://segbanortesfi--preprod.sandbox.my.salesforce.com"
-				
+				//GlobalVariable.HOST="https://segbanortesfi--preprod.sandbox.my.salesforce.com"
+				GlobalVariable.HOSTNAME_MULESOFT="https://segbanortesfi--preprod.sandbox.my.salesforce.com"
 				print(GlobalVariable.TOKEN)
 				
 				KeywordUtil.logInfo('Token: ' + GlobalVariable.TOKEN)
 				
 				//Recuperar token Openshift
-				ResponseObject responseTokenOpenshift = WS.sendRequest(findTestObject('Postman/token/QA - Generación Token Institucional'))
+				//ResponseObject responseTokenOpenshift = WS.sendRequest(findTestObject('Postman/token/QA - Generación Token Institucional'))
+				ResponseObject responseTokenOpenshiftPREInterno =WS.sendRequest(findTestObject('Postman/token/PRE_TokenInstitucional_Interna'))
+				WS.verifyResponseStatusCode(responseTokenOpenshiftPREInterno, 200)
 				
-				WS.verifyResponseStatusCode(responseTokenOpenshift, 200)
-				
-				def jsonResponseTokenOpenshift = jsonSlurper.parseText(responseTokenOpenshift.getResponseText())
+				def jsonResponseTokenOpenshift = jsonSlurper.parseText(responseTokenOpenshiftPREInterno.getResponseText())
 				
 				GlobalVariable.TOKEN_INSTITU = ('Bearer ' + jsonResponseTokenOpenshift.access_token)
 				
 				print(GlobalVariable.TOKEN_INSTITU)
+				
+				GlobalVariable.HOST_CUMULO_MULE="https://syp-arq-capps-api-pre.segurosbanorte.com"
+				GlobalVariable.HOST_CRYPT_MULE="https://syp-arq-capps-api-pre.segurosbanorte.com"
+				GlobalVariable.HOST_PAYWORKS_MULE="https://syp-arq-capps-api-pre.segurosbanorte.com"
+				GlobalVariable.HOST_REGLAINSPECTION="https://mule-entornos.segurosbanorte.com/sb-ivehicular-apps-qa-proxy"
 				
 			 break;
 			
