@@ -46,22 +46,22 @@ String RespuestareglaInsp = GlobalVariable.RQ_REGLA_IV
 WS.comment(RespuestareglaInsp)
 
 //Recuperando la respuesta de la api inspeccion
-ResponseObject respuestaInspection = WS.sendRequest(findTestObject('Migracion Mulesoft/Openshift/Inspeccion Vehicular/sb-ivr-capps-inspection'))
-
-//Recuperando la url de la api
-TestObject request1 = findTestObject('Migracion Mulesoft/Openshift/Inspeccion Vehicular/sb-ivr-capps-inspection')
-
-String url1 = request1.getUrl()
-
-WS.comment(url1)
-
-WS.verifyResponseStatusCode(respuestaInspection, 500)
-
-//Recuperando e imprimiendo la respuesta de la api
-def jsonResponseInsp = jsonSluper.parseText(respuestaInspection.getResponseText())
-
-String respuestaInsp = jsonResponseInsp
-
-WS.comment(respuestaInsp)
+//ResponseObject respuestaInspection = WS.sendRequest(findTestObject('Migracion Mulesoft/Openshift/Inspeccion Vehicular/sb-ivr-capps-inspection'))
+//
+////Recuperando la url de la api
+//TestObject request1 = findTestObject('Migracion Mulesoft/Openshift/Inspeccion Vehicular/sb-ivr-capps-inspection')
+//
+//String url1 = request1.getUrl()
+//
+//WS.comment(url1)
+//
+//WS.verifyResponseStatusCode(respuestaInspection, 500)
+//
+////Recuperando e imprimiendo la respuesta de la api
+//def jsonResponseInsp = jsonSluper.parseText(respuestaInspection.getResponseText())
+//
+//String respuestaInsp = jsonResponseInsp
+//
+//WS.comment(respuestaInsp)
 
 

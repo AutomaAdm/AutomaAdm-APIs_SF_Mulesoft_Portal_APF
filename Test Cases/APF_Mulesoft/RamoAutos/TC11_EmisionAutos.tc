@@ -256,7 +256,7 @@
       <name>Email</name>
    </variable>
    <variable>
-      <defaultValue>true</defaultValue>
+      <defaultValue>'true'</defaultValue>
       <description></description>
       <id>35a7a69b-1238-49d6-83a0-b7f4bb1f48a6</id>
       <masked>false</masked>
@@ -277,7 +277,7 @@
       <name>LastNameConductor</name>
    </variable>
    <variable>
-      <defaultValue>'5946128756'</defaultValue>
+      <defaultValue>'5616978120'</defaultValue>
       <description></description>
       <id>b6372d9e-b199-4b17-bf36-af64005ef504</id>
       <masked>false</masked>

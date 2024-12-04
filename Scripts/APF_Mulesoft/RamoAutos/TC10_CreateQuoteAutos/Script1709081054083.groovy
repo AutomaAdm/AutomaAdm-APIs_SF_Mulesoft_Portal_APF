@@ -51,6 +51,7 @@ if (GlobalVariable.STATUSAUTORATING) {
 	
     //print(GlobalVariable.PRIMERPAGO)
     //Se crea el json de cotización
+	boolean isDriver= Boolean.parseBoolean(isDriver)
     def jsonCotizacion = autos.leerJson(GlobalVariable.RESPONSEAUTORATING, CURP, FirstName, LastName, RFC, PhoneNumber, 
         Email, isDriver,FirstNameConductor, LastNameConductor, PhoneNumberConductor, EmailConductor,
 		Street, ExternalNumber, InternalNumber, City, Country, State, Town, PostalCode, SerieNumber, EngineNumber, 

@@ -20,11 +20,31 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
+            <profileName>PRE</profileName>
+            <requireConfigurationData>false</requireConfigurationData>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/CotizacionEmisionMulesoft/TS01_MF_EmisionAutos</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
             <profileName>default</profileName>
             <requireConfigurationData>false</requireConfigurationData>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/CotizacionEmisionMulesoft/TS03_MF_EmisionDanio</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>PRE</profileName>
+            <requireConfigurationData>false</requireConfigurationData>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CotizacionEmisionMulesoft/TS03_MF_EmisionDanio</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -34,7 +54,17 @@
             <requireConfigurationData>false</requireConfigurationData>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/CotizacionEmisionMulesoft/TS02_MF_EmisionVIda</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>PRE</profileName>
+            <requireConfigurationData>false</requireConfigurationData>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CotizacionEmisionMulesoft/TS02_MF_EmisionVIda</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>

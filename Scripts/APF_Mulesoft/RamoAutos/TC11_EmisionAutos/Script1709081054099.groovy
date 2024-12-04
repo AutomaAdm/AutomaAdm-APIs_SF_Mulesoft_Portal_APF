@@ -86,20 +86,24 @@ if (GlobalVariable.QUOTEID != '') {
     //Se recupera póliza
     def poliza = jsonResponseEmisionVidaPq1.quoteNumber
 
-    //
+    
     WS.comment('Poliza generada:' + poliza)
+	
+	String origen = 'Mulesoft'
+	
+	//Se agrega la poliza en archivo excel
+	CustomKeywords.'ArchivoExcel.agregarUrlKitAutos'(poliza, GlobalVariable.BRANCHCODE, CodePlan, TypeVehiculo, GlobalVariable.URLKIT_PDF,
+		GlobalVariable.RQ_QUOTE, GlobalVariable.RQ_AUTORATING, PaymentPeriod, StartDate, origen)
 
     //En el TC Payworks se encuentra el TC Encrypt y Dencrypt
-//    WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME
-//            , ('LastName') : GlobalVariable.LASTNAME, ('CardCVV') : CardCVV, ('CardMonth') : CardMonth, ('CardYear') : CardYear
-//            , ('TypeOfCard') : TypeOfCard, ('installmentAmount') : GlobalVariable.PRIMERPAGO, ('BRANCHCODE') : GlobalVariable.BRANCHCODE
-//            , ('referencia_cliente1') : poliza, ('mode') : 'AUTORIZADA'], FailureHandling.STOP_ON_FAILURE)
+    WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME
+            , ('LastName') : GlobalVariable.LASTNAME, ('CardCVV') : CardCVV, ('CardMonth') : CardMonth, ('CardYear') : CardYear
+            , ('TypeOfCard') : TypeOfCard, ('installmentAmount') : GlobalVariable.PRIMERPAGO, ('BRANCHCODE') : GlobalVariable.BRANCHCODE
+            , ('referencia_cliente1') : poliza, ('mode') : 'AUTORIZADA'], FailureHandling.STOP_ON_FAILURE)
 
-    String origen = 'Mulesoft'
+    
 
-    //Se agrega la poliza en archivo excel
-    CustomKeywords.'ArchivoExcel.agregarUrlKitAutos'(poliza, GlobalVariable.BRANCHCODE, CodePlan, TypeVehiculo, GlobalVariable.URLKIT_PDF, 
-        GlobalVariable.RQ_QUOTE, GlobalVariable.RQ_AUTORATING, PaymentPeriod, StartDate, origen)
+    
 }
 
 

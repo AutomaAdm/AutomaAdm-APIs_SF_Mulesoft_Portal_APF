@@ -142,6 +142,11 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
+      <name>PROXY</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
       <name>PQ</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

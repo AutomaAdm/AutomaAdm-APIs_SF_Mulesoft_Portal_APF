@@ -179,4 +179,9 @@
       <initValue>''</initValue>
       <name>HOST_REGLAINSPECTION</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>PROXY</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

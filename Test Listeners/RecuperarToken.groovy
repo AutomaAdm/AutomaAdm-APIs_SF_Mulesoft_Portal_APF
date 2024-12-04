@@ -38,7 +38,7 @@ class RecuperarToken {
 		switch (GlobalVariable.AMBIENTE) {
 			
 			case "QA":
-			
+				
 				//Recuperar token SalesForce
 				ResponseObject responseTokenSF = WS.sendRequest(findTestObject('Postman/token/Token_SF_QA'))
 				
@@ -49,9 +49,8 @@ class RecuperarToken {
 				WS.verifyResponseStatusCode(responseTokenSF, 200)
 				
 				
-				
+				//Recuperamos Token 
 				def jsonResponseTokenSF = jsonSlurper.parseText(responseTokenSF.getResponseText())
-				
 				GlobalVariable.TOKEN = ('Bearer ' + jsonResponseTokenSF.access_token)
 				
 				GlobalVariable.HOST="https://segbanortesfi--qa.sandbox.my.salesforce.com"
