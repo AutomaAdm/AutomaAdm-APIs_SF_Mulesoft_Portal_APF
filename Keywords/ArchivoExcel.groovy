@@ -197,7 +197,7 @@ class ArchivoExcel {
 	}
 
 	@Keyword
-	def agregarUrlKitVida(def poliza, def branch, def paquete, def urlKit, def Request_Quote, def codFormaPago, def StartDate, def origen) {
+	def agregarUrlKitVida(def poliza, def branch, def paquete, def urlKit, def Request_Quote, def codFormaPago, def StartDate, def ambiente, def proxy) {
 
 		String prod="";
 		String formaPago="";
@@ -283,7 +283,11 @@ class ArchivoExcel {
 
 		cell = row.createCell(8);
 
-		cell.setCellValue(origen);
+		cell.setCellValue(ambiente);
+		
+		cell = row.createCell(9);
+		
+		cell.setCellValue(proxy);
 
 
 		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
@@ -294,7 +298,7 @@ class ArchivoExcel {
 
 
 	@Keyword
-	def agregarUrlKitAutos(def poliza, def branch,def codigoPlan,def codTipoVehiculo,  def urlKit, def Request_Quote, def Request_AutoRating,def codFormaPago, def fechaEjecucion, def origen ) {
+	def agregarUrlKitAutos(def poliza, def branch,def codigoPlan,def codTipoVehiculo,  def urlKit, def Request_Quote, def Request_AutoRating,def codFormaPago, def fechaEjecucion, def ambiente,def proxy ) {
 
 		String plan="";
 		String tipoVehiculo="";
@@ -397,7 +401,11 @@ class ArchivoExcel {
 
 		cell = row.createCell(10);
 
-		cell.setCellValue(origen);
+		cell.setCellValue(ambiente);
+		
+		cell = row.createCell(11);
+		
+		cell.setCellValue(proxy);
 
 		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
 		workbook.write(fos);
@@ -406,7 +414,7 @@ class ArchivoExcel {
 	}
 
 	@Keyword
-	def agregarUrlKitCAHA(def poliza, def branch,  def pq,def urlKit, def Request_Quote, def codFormaPago, def StartDate, def origen) {
+	def agregarUrlKitCAHA(def poliza, def branch,  def pq,def urlKit, def Request_Quote, def codFormaPago, def StartDate, def ambiente, def proxy) {
 
 		String plan="";
 		String tipoPaquete="";
@@ -488,7 +496,11 @@ class ArchivoExcel {
 
 		cell = row.createCell(7);
 
-		cell.setCellValue(origen);
+		cell.setCellValue(ambiente);
+		
+		cell = row.createCell(8);
+		
+		cell.setCellValue(proxy);
 
 
 

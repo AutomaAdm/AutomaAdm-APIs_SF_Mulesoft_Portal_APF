@@ -93,18 +93,22 @@ if (GlobalVariable.QUOTEID != '') {
     //Se recupera póliza
     def poliza = jsonResponseEmisionVidaPq1.quoteNumber
 
-    //
+    //Imprime num Poliza
     WS.comment('Poliza generada:' + poliza)
 
+	//Recuperar Fecha de ejecucion 
+	def fechaEjec=CustomKeywords.'RecuperarFecha.devolverFechaEjecucion'()
+	
+	//Se agrega la poliza en archivo excel
+	CustomKeywords.'ArchivoExcel.agregarUrlKitVida'(poliza, GlobalVariable.BRANCHCODE,GlobalVariable.PQ, GlobalVariable.URLKIT_PDF, GlobalVariable.RQ_QUOTE, PaymentPeriod,fechaEjec, GlobalVariable.AMBIENTE, GlobalVariable.PROXY)
+	
+	
      //En el TC Payworks se tiene el TC de Encrypt y Dencrypt
     WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME
             , ('LastName') : GlobalVariable.LASTNAME, ('CardCVV') : CardCVV, ('CardMonth') : CardMonth, ('CardYear') : CardYear
             , ('TypeOfCard') : TypeOfCard, ('installmentAmount') : GlobalVariable.PRIMERPAGO, ('BRANCHCODE') : GlobalVariable.BRANCHCODE
             , ('referencia_cliente1') : poliza, ('mode') : 'AUTORIZADA'], FailureHandling.STOP_ON_FAILURE)
 	
-	String origen="Mulesoft"
-	//Se agrega la poliza en archivo excel
-	CustomKeywords.'ArchivoExcel.agregarUrlKitVida'(poliza, GlobalVariable.BRANCHCODE,GlobalVariable.PQ, GlobalVariable.URLKIT_PDF, GlobalVariable.RQ_QUOTE, PaymentPeriod,StartDate, origen)
 	
 }
 

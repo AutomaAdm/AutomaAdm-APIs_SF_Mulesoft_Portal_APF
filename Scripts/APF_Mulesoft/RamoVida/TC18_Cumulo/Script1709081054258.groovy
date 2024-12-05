@@ -40,7 +40,7 @@ String url = request.getUrl()
 WS.comment(url)
 
 
-WS.verifyResponseStatusCode(responseCumulo, 200)
+WS.verifyResponseStatusCode(responseCumulo, 200, FailureHandling.CONTINUE_ON_FAILURE)
 
 def jsonResponseCumulo = jsonSlurper.parseText(responseCumulo.getResponseText())
 

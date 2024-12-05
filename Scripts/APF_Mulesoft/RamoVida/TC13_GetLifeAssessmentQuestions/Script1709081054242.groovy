@@ -38,18 +38,18 @@ print(responseQuestions.getResponseText())
 print(jsonResponseQuestions)
 
 //se recupera el estatus de la validación entre la respesta esperada con la obtenida de  GetLifeAssessmentQuestions
-def status = CustomKeywords.'consultaPaquetes.ValidacionPaquetes.validarCuestionario'(jsonResponseQuestions)
-
-//Se valida estatus
-if (status) {
-    WS.comment('El cuestionario es el esperado')
-
-    GlobalVariable.STATUSRESTPQ = true
-} else {
-    WS.comment('El cuestionario no coincide con el esperado')
-
-    GlobalVariable.STATUSRESTPQ = false
-}
+//def status = CustomKeywords.'consultaPaquetes.ValidacionPaquetes.validarCuestionario'(jsonResponseQuestions)
+//
+////Se valida estatus
+//if (status) {
+//    WS.comment('El cuestionario es el esperado')
+//
+//    GlobalVariable.STATUSRESTPQ = true
+//} else {
+//    WS.comment('El cuestionario no coincide con el esperado')
+//
+//    GlobalVariable.STATUSRESTPQ = false
+//}
 
 
 

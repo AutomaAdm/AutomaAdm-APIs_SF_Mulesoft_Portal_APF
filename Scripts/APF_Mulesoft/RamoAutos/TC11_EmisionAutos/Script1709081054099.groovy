@@ -88,12 +88,12 @@ if (GlobalVariable.QUOTEID != '') {
 
     
     WS.comment('Poliza generada:' + poliza)
-	
-	String origen = 'Mulesoft'
+	//Recuperar Fecha de ejecucion
+	def fechaEjec=CustomKeywords.'RecuperarFecha.devolverFechaEjecucion'()
 	
 	//Se agrega la poliza en archivo excel
 	CustomKeywords.'ArchivoExcel.agregarUrlKitAutos'(poliza, GlobalVariable.BRANCHCODE, CodePlan, TypeVehiculo, GlobalVariable.URLKIT_PDF,
-		GlobalVariable.RQ_QUOTE, GlobalVariable.RQ_AUTORATING, PaymentPeriod, StartDate, origen)
+		GlobalVariable.RQ_QUOTE, GlobalVariable.RQ_AUTORATING, PaymentPeriod, fechaEjec, GlobalVariable.AMBIENTE, GlobalVariable.PROXY)
 
     //En el TC Payworks se encuentra el TC Encrypt y Dencrypt
     WebUI.callTestCase(findTestCase('APF_Mulesoft/TRANSVERSAL/TC17_Payworks'), [('CardNumber') : CardNumber, ('FirstName') : GlobalVariable.FIRSTNAME

@@ -39,7 +39,7 @@ def jsonResponseGenerarKit = jsonSlurper.parseText(responseGenerarKit.getRespons
 
 def vId = jsonResponseGenerarKit.Id
 
-WS.delay(8)
+WS.delay(12)
 
 //print(vId)
 ResponseObject responseDocumURL =WS.sendRequest(findTestObject('Migracion Mulesoft/Salesforce/Transversal/GetDocumentURL/MS_GetDocumentURL', [('Id') : vId]))
