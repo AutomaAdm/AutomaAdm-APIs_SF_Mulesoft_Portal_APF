@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TS02_DescargarDatosVehiculo</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>3</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>361bc21a-d2c3-4924-9405-081b0a970073</testSuiteGuid>
+   <testCaseLink>
+      <guid>c9258ea3-2301-4b7b-901d-130ab56bb187</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/DESCARGAR_DATOS_CATALOGOS/TC03_AnioVehiculo</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>8d6662e7-070b-42e4-96e4-eae9ac001535</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/DATA_DESCARGAR_DATOS_CATALOGOS/DATA02_modelo</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>8d6662e7-070b-42e4-96e4-eae9ac001535</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>codMarca</value>
+         <variableId>47f2c47e-2976-479a-97b8-d2174bb82e2e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>8d6662e7-070b-42e4-96e4-eae9ac001535</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>codModelo</value>
+         <variableId>3ccedb0e-c854-4b55-bbb9-2e1a59d98fd0</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

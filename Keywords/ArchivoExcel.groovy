@@ -284,9 +284,9 @@ class ArchivoExcel {
 		cell = row.createCell(8);
 
 		cell.setCellValue(ambiente);
-		
+
 		cell = row.createCell(9);
-		
+
 		cell.setCellValue(proxy);
 
 
@@ -402,9 +402,9 @@ class ArchivoExcel {
 		cell = row.createCell(10);
 
 		cell.setCellValue(ambiente);
-		
+
 		cell = row.createCell(11);
-		
+
 		cell.setCellValue(proxy);
 
 		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
@@ -497,13 +497,175 @@ class ArchivoExcel {
 		cell = row.createCell(7);
 
 		cell.setCellValue(ambiente);
-		
+
 		cell = row.createCell(8);
-		
+
 		cell.setCellValue(proxy);
 
 
 
+		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
+		workbook.write(fos);
+		fos.close();
+		fis.close();
+	}
+	
+	@Keyword
+	def exportarDatosMarcas(def response) {
+
+
+		String gTestIdPathWay =  rootPrj+"\\Data Files\\catalogos.xlsx"
+
+		FileInputStream fis = new FileInputStream (gTestIdPathWay);
+		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+
+		XSSFSheet sheet = workbook.getSheet("make");
+		int regitro=1
+		
+		for (item in response.marca) {
+			
+			Row row = sheet.createRow(regitro);
+			Cell cell = row.createCell(0);
+			cell.setCellValue(item.codMarca);
+			cell = row.createCell(1);
+			cell.setCellValue(item.descMarca);
+			regitro=regitro+1
+		}
+		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
+		workbook.write(fos);
+		fos.close();
+		fis.close();
+	}
+	
+	
+	@Keyword
+	def exportarDatosModel(def codMarca ,def response) {
+		
+		def validarCadenaVacia=response.collect().isEmpty()
+
+		String gTestIdPathWay =  rootPrj+"\\Data Files\\catalogos.xlsx"
+
+		FileInputStream fis = new FileInputStream (gTestIdPathWay);
+		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+
+		XSSFSheet sheet = workbook.getSheet("modelo");
+		
+		int num=0
+		for  ( Object item in   sheet.collect()) {
+			//print(item.(1))
+			num++
+		}
+	
+		if (validarCadenaVacia) {
+			Row row = sheet.createRow(num);
+			Cell cell = row.createCell(0);
+			cell.setCellValue(codMarca);
+			cell = row.createCell(1);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(2);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(3);
+			cell.setCellValue("Sin datos");
+		}
+		else {
+			for (item in response.modelo) {
+				
+				Row row = sheet.createRow(num);
+				Cell cell = row.createCell(0);
+				cell.setCellValue(item.codMarca);
+				cell = row.createCell(1);
+				cell.setCellValue(item.codModelo);
+				cell = row.createCell(2);
+				cell.setCellValue(item.codTipoReducido);
+				cell = row.createCell(3);
+				cell.setCellValue(item.descModDetalle);
+				num=num+1
+			}
+		}
+		
+		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
+		workbook.write(fos);
+		fos.close();
+		fis.close();
+	}
+	
+	@Keyword
+	def exportarDatosAnioVehiculo(def codMarca, def codModelo ,def response) {
+		
+		def validarCadenaVacia=response.collect().isEmpty()
+
+		String gTestIdPathWay =  rootPrj+"\\Data Files\\catalogos.xlsx"
+
+		FileInputStream fis = new FileInputStream (gTestIdPathWay);
+		XSSFWorkbook workbook = new XSSFWorkbook (fis);
+
+		XSSFSheet sheet = workbook.getSheet("anio");
+		
+		int num=0
+		for  ( Object item in   sheet.collect()) {
+			//print(item.(1))
+			num++
+		}
+	
+		if (validarCadenaVacia) {
+			Row row = sheet.createRow(num);
+			Cell cell = row.createCell(0);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(1);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(2);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(3);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(4);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(5);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(6);
+			cell.setCellValue(codMarca);
+			cell = row.createCell(7);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(8);
+			cell.setCellValue(codModelo	);
+			cell = row.createCell(9);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(10);
+			cell.setCellValue("Sin datos");
+			cell = row.createCell(11);
+			cell.setCellValue("Sin datos");
+		}
+		else {
+			for (item in response) {
+				
+				Row row = sheet.createRow(num);
+				Cell cell = row.createCell(0);
+				cell.setCellValue(item.CantidadPasajeros);
+				cell = row.createCell(1);
+				cell.setCellValue(item.ClaseVeh);
+				cell = row.createCell(2);
+				cell.setCellValue(item.DescModeloDetalle);
+				cell = row.createCell(3);
+				cell.setCellValue(item.GastosMedicosOcupantes);
+				cell = row.createCell(4);
+				cell.setCellValue(item.anoVeh);
+				cell = row.createCell(5);
+				cell.setCellValue(item.claveBG);
+				cell = row.createCell(6);
+				cell.setCellValue(item.codMarca);
+				cell = row.createCell(7);
+				cell.setCellValue(item.codModDetalle);
+				cell = row.createCell(8);
+				cell.setCellValue(item.codModelo);
+				cell = row.createCell(9);
+				cell.setCellValue(item.mtoValorComercial);
+				cell = row.createCell(10);
+				cell.setCellValue(item.tipoVeh);
+				cell = row.createCell(11);
+				cell.setCellValue(item.coberturasGastosOcupantes);
+				num=num+1
+			}
+		}
+		
 		FileOutputStream fos = new FileOutputStream(gTestIdPathWay);
 		workbook.write(fos);
 		fos.close();

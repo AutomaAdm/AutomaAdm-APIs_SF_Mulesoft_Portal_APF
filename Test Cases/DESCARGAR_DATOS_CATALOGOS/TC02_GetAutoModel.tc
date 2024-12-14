@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_GetAutoModel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>490980cc-e10d-4901-b55d-b69a98e9c3a8</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7f90277f-5743-4e88-852f-90450b9c3943</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'SI'</defaultValue>
+      <description></description>
+      <id>7f90277f-5743-4e88-852f-90450b9c3943</id>
+      <masked>false</masked>
+      <name>codMarca</name>
+   </variable>
+</TestCaseEntity>
